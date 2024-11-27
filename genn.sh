@@ -8,8 +8,7 @@ do
 case "$1" in
 -of) type="$2"
 shift ;;
--slugify) slugify=1
-shift ;;
+-slugify) slugify=1 ;;
 *) echo "$1 is not an option";;
 esac
 shift
@@ -32,7 +31,6 @@ space)
   OBJECT_INDEX=$(shuf -i 1-$spaceCount -n 1)
   RESULT="${adjectives[$ADJECTIVES_INDEX]} ${space[$OBJECT_INDEX]}"
   ;;
-*) echo "$1 is not an option";;
 esac
 
 if [[ "$slugify" == "0" ]]
