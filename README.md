@@ -7,7 +7,7 @@ sudo wget https://raw.githubusercontent.com/ON8RU/service-naming/refs/heads/mast
 ```
 
 ```bash
-chmod +x /usr/bin/genn
+sudo chmod +x /usr/bin/genn
 ```
 
 ## Usage
