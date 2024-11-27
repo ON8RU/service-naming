@@ -7,7 +7,7 @@ wget https://raw.githubusercontent.com/ON8RU/service-naming/refs/heads/master/ge
 chmod +x /usr/bin/genn
 ```
 
-Usage
+## Usage
 
 Default names
 
@@ -21,7 +21,7 @@ Slugified names
 genn -slugify
 ```
 
-## Animals
+### Animals
 
 ```bash
 genn
@@ -33,7 +33,7 @@ or
 genn -of animals
 ```
 
-## Space
+### Space
 
 ```bash
 genn -of space
