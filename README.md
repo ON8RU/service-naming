@@ -1,4 +1,19 @@
-# service-naming
+# 🦎 GENN - Command-Line Utility for Title and Slug Generation
+
+GENN - is command-line utility to help you generate titles for services and aliases for this.
+
+## Key Features:
+1. Title Generation with Themes:
+The `-of` flag allows you to choose between two predefined themes for generating titles:
+
+    - Animals: Titles inspired by the animal kingdom (e.g., "Berserk Boomslang", "Slow Dachsador").
+    - Space: Titles inspired by space exploration and celestial bodies (e.g., "Mature Astarte", "Fantastic Bryanhoran").
+
+2. Slug Generation (-slugify):
+The -slugify flag converts any string or title into a clean, SEO-friendly slug. This is ideal for generating readable, hyphenated URL strings that are compatible with web standards and search engines.
+
+    - Animals: Titles inspired by the animal kingdom (e.g., "loving-lizard", "rich-sturgeon").
+    - Space: Titles inspired by space exploration and celestial bodies (e.g., "hallowed-bunsen", "rural-charton").
 
 ## Istallation
 
@@ -10,34 +25,51 @@ sudo wget https://raw.githubusercontent.com/ON8RU/service-naming/refs/heads/mast
 sudo chmod +x /usr/bin/genn
 ```
 
-## Usage
+## Usage Examples
 
-Default names
-
-```bash
-genn
-```
-
-Slugified names
-
-```bash
-genn -slugify
-```
-
-### Animals
+### Generate a Themed Title (Animals):
+To generate a title using the "animals" theme:
 
 ```bash
 genn
 ```
-
 or
 
 ```bash
 genn -of animals
 ```
 
-### Space
+Output: `Plucky Siamese`
+
+### Generate a Themed Title (Space):
+To generate a title using the "space" theme:
 
 ```bash
 genn -of space
 ```
+
+Output: `Known Trinculo`
+
+### Generate a Slug:
+To generate an SEO-friendly slug from a string:
+
+```bash
+genn -slugify
+```
+Output: `handsomely-gecko`
+
+or
+
+```bash
+genn -of animals -slugify
+```
+
+Output: `crimson-earthworm`
+
+or
+
+```bash
+genn -of space -slugify
+```
+
+Output: `young-eurybates`
