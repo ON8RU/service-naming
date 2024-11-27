@@ -9,6 +9,18 @@ chmod +x /usr/bin/genn
 
 Usage
 
+Default names
+
+```bash
+genn
+```
+
+Slugified names
+
+```bash
+genn -slugify
+```
+
 ## Animals
 
 ```bash
