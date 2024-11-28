@@ -4,7 +4,7 @@ GENN - is command-line utility to help you generate titles for services and alia
 
 ## Key Features:
 1. Title Generation with Themes:
-The `-of` flag allows you to choose between two predefined themes for generating titles:
+The `-of` flag allows you to choose between predefined themes for generating titles:
 
     - Animals: Titles inspired by the animal kingdom (e.g., "Berserk Boomslang", "Slow Dachsador").
     - Space: Titles inspired by space exploration and celestial bodies (e.g., "Mature Astarte", "Fantastic Bryanhoran").
