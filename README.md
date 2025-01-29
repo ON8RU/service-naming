@@ -1,94 +1,68 @@
 # 🦎 GENN - Command-Line Utility for Title and Slug Generation
 
-GENN - is command-line utility to help you generate titles for services and aliases for this.
+GENN — a utility for generating creative titles and SEO-friendly slugs.
 
-## Key Features:
-1. Title Generation with Themes:
-The `-of` flag allows you to choose between predefined themes for generating titles:
+## Features
+1. **Title Generation** (`-of`):  
+   Generate names in specific themes:
+   - `animals` (Example: "Plucky Siamese")
+   - `space` (Example: "Mature Astarte")
+   - `professions` (Example: "Ablaze Engineer")
 
-    - Animals: Titles inspired by the animal kingdom (e.g., "Berserk Boomslang", "Slow Dachsador").
-    - Space: Titles inspired by space exploration and celestial bodies (e.g., "Mature Astarte", "Fantastic Bryanhoran").
-    - Professions : Names inspired by people's professions and their deeds (e.g., "Resonant Gofer", "Damaging Cook").
+2. **Slug Conversion** (`-slug`):  
+   Converts the generated title to **kebab-case** (e.g., `plucky-siamese`).  
+   *Two modes:*
+   - `genn -of [theme]` → Returns a title.
+   - `genn -of [theme] -slug` → Returns the title as a slug.
 
-2. Slug Generation (-slugify):
-The -slugify flag converts any string or title into a clean, SEO-friendly slug. This is ideal for generating readable, hyphenated URL strings that are compatible with web standards and search engines.
-
-    - Animals: Titles inspired by the animal kingdom (e.g., "loving-lizard", "rich-sturgeon").
-    - Space: Titles inspired by space exploration and celestial bodies (e.g., "hallowed-bunsen", "rural-charton").
-    - Professions : Names inspired by people's professions and their deeds (e.g., "cumbersome-flautist", "adamant-tutor").
-
-## Istallation
-
+## Installation
 ```bash
 sudo wget https://raw.githubusercontent.com/ON8RU/service-naming/refs/heads/master/genn.sh -O /usr/bin/genn
-```
-
-```bash
 sudo chmod +x /usr/bin/genn
 ```
 
-## Usage Examples
+**Dependencies**:  
+- Bash ≥4.0
+- `wget` (for installation only)
 
-### Generate a Themed Title (Animals):
-To generate a title using the "animals" theme:
-
+## Usage
+### Generate a Title
 ```bash
-genn
-```
-or
-
-```bash
-genn -of animals
+genn                  # Random theme → "Adamant Tutor"
+genn -of animals      # "Plucky Siamese"
+genn -of space        # "Known Trinculo"
 ```
 
-Output: `Plucky Siamese`
-
-### Generate a Themed Title (Space):
-To generate a title using the "space" theme:
-
+### Convert Title to Slug
 ```bash
-genn -of space
+genn -of animals -slug      # plucky-siamese
+genn -of space -slug        # mature-astarte
+genn -slug -of professions  # ablaze-engineer (order-insensitive)
 ```
 
-Output: `Known Trinculo`
-
-### Generate a Themed Title (Professions):
-To generate a title using the "professions" theme:
-
+### Batch Generation
 ```bash
-genn -of professions
+# 5 space-themed titles
+for i in {1..5}; do genn -of space; done
+
+# 3 animal-themed slugs
+for i in {1..3}; do genn -of animals -slug; done
 ```
 
-Output: `Ablaze Ethologist`
+---
 
-### Generate a Slug:
-To generate an SEO-friendly slug from a string:
+## Collaboration
+🚀 **Want to contribute?** I’d love to collaborate! Here’s how you can help:
+- **Report bugs** or suggest features in [Issues](https://github.com/ON8RU/service-naming/issues).
+- **Submit Pull Requests** for fixes or improvements.
+- **Propose new themes** (e.g., `tech`, `mythology`, `food`).
 
-```bash
-genn -slugify
-```
-Output: `handsomely-gecko`
+---
 
-or
+## Development
+License: [MIT](https://choosealicense.com/licenses/mit/).  
+For setup details, check the [repository](https://github.com/ON8RU/service-naming).
 
-```bash
-genn -of animals -slugify
-```
+---
 
-Output: `crimson-earthworm`
-
-or
-
-```bash
-genn -of space -slugify
-```
-
-Output: `young-eurybates`
-
-or
-
-```bash
-genn -of professions -slugify
-```
-
-Output: `vacuous-fishmonger`
+✨ **Pro Tip**: Add `alias genn="bash /usr/bin/genn"` to your `.bashrc`/`.zshrc` for quick access!
